@@ -1,22 +1,26 @@
 //united states customary units of length
-    // international
-    const lengthPoint = 1; // p
-    const lengthPica = 12; // P/
-    const lengthInch = 72; // in
-    const lengthFoot = 864; // ft
-    const lengthYard = 2592; // yd
-    var lengthMile = 1760 * lengthYard; // mi
-    // us survey
-    var lengthLink = 7.92 * lengthInch; // li
-    var lengthRod = 25 * lengthLink; // rd
-    var lengthChain = 4 * lengthRod; // ch
-    var lengthFurlong = 10 * lengthChain; // fur
-    var lengthStatuteMile = 8 * lengthFurlong; // mi
-    var lengthLeague = 3 * lengthStatuteMile; // lea
-    // international nautical
-    var lengthFathom = 2 * lengthYard; // ftm
-    var lengthCable = 120 * lengthFathom; // cb
-    var lengthNauticalMile = 8.439 * lengthCable; // NM or nmi
+// international
+const lengthPoint = 1; // p
+const lengthPica = 12; // P/
+const lengthInch = 72; // in
+const lengthFoot = 864; // ft
+const lengthYard = 2592; // yd
+const lengthMile = 4561920; // mi
+// us survey
+const lengthLink = 570.24; // li
+const lengthRod = 14256; // rd
+const lengthChain = 57024; // ch
+const lengthFurlongUs = 570240; // fur
+const lengthStatuteMile = 4561920; // mi
+const lengthLeague = 13685760; // lea
+// international nautical
+const lengthFathom = 5184; // ftm
+const lengthCable = 622080; // cb
+const lengthNauticalMile = 5249733.12; // NM or nmi
 
+// 
+function convert(value,fromUnit,toUnit) {
+    return (value * fromUnit / toUnit);//.toFixed(10);
+}
 
-    console.log(lengthMile);
+console.log(convert(1, lengthChain, lengthFurlongUs)); // 0.1
