@@ -100,7 +100,7 @@ function convert(value,fromUnit,toUnit,commas=true) {
 
 console.log(convert(1,mile,foot)); //
 
-console.log(convert(125,foot,inch,false)); //
+console.log(convert(1, mile, foot,false)); //
 
 //todo:
 /*
