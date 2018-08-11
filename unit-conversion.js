@@ -69,30 +69,41 @@ function convert(value,fromUnit,toUnit,commas=true) {
     var x = str.length;
     var i = str.lastIndexOf(".");
 
-    console.log("strLength: "+ x);
+    //console.log("strLength: "+ x);
     
     if(commas){
-
+        
         if (i != -1) {
+
             var fixedLength = x - i;
             str = (value * fromUnit / toUnit).toFixed(fixedLength);
+            
+            var array = str.split(".");
+            array[0] = array[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            array = array.join(".");
+
+            str = array;
+
         } else {
+
             str = (value * fromUnit / toUnit).toFixed(0);
+            str = str.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
         }
 
-        console.log("index of \".\": " + i);
+        //console.log("index of \".\": " + i);
     }
 
     return str;
 
 }
 
-//console.log(convert(1,lengthHubbleLength,lengthMile) + " miles"); // 8.112503014993379e+22 miles
+console.log(convert(1,mile,foot)); //
 
-console.log(convert(120,dekameter,foot,true)); //
+console.log(convert(125,foot,inch,false)); //
 
 //todo:
 /*
-    - add commas to convert output
+    x add commas to convert output
     - finish adding units
 */
