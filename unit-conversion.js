@@ -1,53 +1,85 @@
 // unit of length
-const point = 1; // p or pt
-const pixel = 0.75; // px
-const pica = 12; // P/
-const inch = 72; // in
-const foot = 864; // ft
-const yard = 2592; // yd
-const mile = 4561920; // mi
-const link = 570.24; // li
-const rod = 14256; // rd
-const chain = 57024; // ch
-const furlongUs = 570240; // fur
-const statuteMile = 4561920; // mi
-const league = 13685760; // lea
-const fathom = 5184; // ftm
-const cable = 622080; // cb
-const nauticalMile = 5249733.12; // NM or nmi
-const nanometer = 2.8346e-6; // nm
-const millimeter = 2.83465; // mm
-const centimeter = 28.3465; // cm
-const decimeter = 283.465; // dm
-const meter = 2834.65; // m
-const dekameter = 28346.5; // dam
-const hectometer = 283465; // hm
-const kilometer = 2834650; // km
-const gigameter = 2.8346457e+12; // Gm
-const earthRadius = 18060641280; // RE
-const lunarDistance = 1089641963520; // LD
-const astronomicalUnit = 4.2405696e+14; // AU
-const lightYear = 7.76018152e-7; // ly
-const parsec = 8.7468026e+19; // pc
-const hubbleLength = 3.700858975415859e+29; // c/H₀
+// standard ways of measuring the magnitude of a linear dimension
+const length = {
+    point:              1, // p or pt
+    pixel:              0.75, // px
+    pica:               12, 
+    inch:               72, // in
+    foot:               864, // ft
+    yard:               2592, // yd
+    mile:               4561920, // mi
+    link:               570.24, // li
+    rod:                14256, // rd
+    chain:              57024, // ch
+    furlongUs:          570240, // fur
+    statuteMile:        4561920, // mi
+    league:             13685760, // lea
+    fathom:             5184, // ftm
+    cable:              622080, // cb
+    nauticalMile:       5249733.12, // NM or nmi
+    nanometer:          2.8346e-6, // nm
+    millimeter:         2.83465, // mm
+    centimeter:         28.3465, // cm
+    decimeter:          283.465, // dm
+    meter:              2834.65, // m
+    dekameter:          28346.5, // dam
+    hectometer:         283465, // hm
+    kilometer:          2834650, // km
+    gigameter:          2.8346457e+12, // Gm
+    earthRadius:        18060641280, // RE
+    lunarDistance:      1089641963520, // LD
+    astronomicalUnit:   4.2405696e+14, // AU
+    lightYear:          7.76018152e-7, // ly
+    parsec:             8.7468026e+19, // pc
+    hubbleLength:       3.700858975415859e+29 // c/H₀
+};
 
 // unit of mass
+// standard ways of measuring the amount of matter an object contains
+const mass = {
+    decigram:           0,
+    centigram:          0,
+    milligram:          0,
+    microgram:          0,
+    nanogram:           0,
+    picogram:           0,
+    femtogram:          0,
+    attogram:           0,
+    zeptogram:          0,
+    yoctogram:          0
+};
 
+// unit of weight
+// standard ways of measuring the pull of gravity on an object
+const weight = {
+
+};
 
 // unit of time
+// standard ways of measuring or expressing duration
+const time = {
 
+};
 
 // unit of electric current
+const electric = {
 
+};
 
 // unit of thermodynamic temperature
+const temperature = {
 
+};
 
 // unit of amount of substance
+const substance = {
 
+};
 
 // unit of luminous intensity
+const luminous = {
 
+};
 
 // derived units
 // area
@@ -98,9 +130,9 @@ function convert(value,fromUnit,toUnit,commas=true) {
 
 }
 
-console.log(convert(1,mile,foot)); //
+console.log("1 mi to m = " + convert(1,length.mile,length.meter)); // 1,609.34154128375621
+console.log("1 mi to ft = " + convert(1,length.mile,length.foot, false)); // 5280
 
-console.log(convert(1, mile, foot,false)); //
 
 //todo:
 /*
