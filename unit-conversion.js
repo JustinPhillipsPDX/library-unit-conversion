@@ -19,13 +19,13 @@ const lengthCable = 622080; // cb
 const lengthNauticalMile = 5249733.12; // NM or nmi
 
 // metric units of length
-const lengthMillimeter = 2.83465;
-const lengthCentimeter = 28.3465;
-const lengthDecimeter = 283.465;
-const lengthMeter = 2834.65;
-const lengthDekameter = 28346.5;
-const lengthHectometer = 283465;
-const lengthKilometer = 2834650;
+const lengthMillimeter = 2.83465; // mm
+const lengthCentimeter = 28.3465; // cm
+const lengthDecimeter = 283.465; // dm
+const lengthMeter = 2834.65; // m
+const lengthDekameter = 28346.5; // dam
+const lengthHectometer = 283465; // hm
+const lengthKilometer = 2834650; // km
 
 //
 function convert(value,fromUnit,toUnit) {
