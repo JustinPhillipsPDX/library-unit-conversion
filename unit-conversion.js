@@ -1,5 +1,6 @@
 // unit of length
-const point = 1; // p
+const point = 1; // p or pt
+const pixel = 0.75; // px
 const pica = 12; // P/
 const inch = 72; // in
 const foot = 864; // ft
@@ -68,4 +69,4 @@ function convert(value,fromUnit,toUnit) {
 
 //console.log(convert(1, lengthHubbleLength, lengthMile) + " miles"); // 8.112503014993379e+22 miles
 
-console.log(convert(1, hubbleLength, gigameter) + " Gm"); // 130558079107235840 Gm
+console.log(convert(1, inch, pixel) + " px"); // 96 px
