@@ -74,7 +74,7 @@ function convert(value,fromUnit,toUnit,commas=true) {
     if(commas){
 
         if (i != -1) {
-            fixedLength = x - i;
+            var fixedLength = x - i;
             str = (value * fromUnit / toUnit).toFixed(fixedLength);
         } else {
             str = (value * fromUnit / toUnit).toFixed(0);
