@@ -2,7 +2,7 @@
 // international
 const lengthPoint = 1; // p
 const lengthPica = 12; // P/
-const lengthInch = 72; // in 0.0138889
+const lengthInch = 72; // in
 const lengthFoot = 864; // ft
 const lengthYard = 2592; // yd
 const lengthMile = 4561920; // mi
@@ -39,7 +39,7 @@ const lengthHubbleLength = 3.700858975415859e+29; // c/H₀
 
 //
 function convert(value,fromUnit,toUnit) {
-    return (value * fromUnit / toUnit);//.toFixed(10);
+    return (value * fromUnit / toUnit);//.toFixed(2);
 }
 
 //console.log(convert(1, lengthHubbleLength, lengthMile) + " miles"); // 8.112503014993379e+22 miles
