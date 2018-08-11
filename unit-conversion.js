@@ -63,13 +63,33 @@ const hubbleLength = 3.700858975415859e+29; // c/H₀
 // luminance
 // mass fraction
 
-function convert(value,fromUnit,toUnit) {
-    return (value * fromUnit / toUnit);//.toFixed(2);
+function convert(value,fromUnit,toUnit,commas=true) {
+
+    var str = (value * fromUnit / toUnit).toString();
+    var x = str.length;
+    var i = str.lastIndexOf(".");
+
+    console.log("strLength: "+ x);
+    
+    if(commas){
+
+        if (i != -1) {
+            fixedLength = x - i;
+            str = (value * fromUnit / toUnit).toFixed(fixedLength);
+        } else {
+            str = (value * fromUnit / toUnit).toFixed(0);
+        }
+
+        console.log("index of \".\": " + i);
+    }
+
+    return str;
+
 }
 
-//console.log(convert(1, lengthHubbleLength, lengthMile) + " miles"); // 8.112503014993379e+22 miles
+//console.log(convert(1,lengthHubbleLength,lengthMile) + " miles"); // 8.112503014993379e+22 miles
 
-console.log(convert(1,inch,pixel) + " px"); // 96 px
+console.log(convert(120,dekameter,foot,true)); //
 
 //todo:
 /*
