@@ -69,4 +69,10 @@ function convert(value,fromUnit,toUnit) {
 
 //console.log(convert(1, lengthHubbleLength, lengthMile) + " miles"); // 8.112503014993379e+22 miles
 
-console.log(convert(1, inch, pixel) + " px"); // 96 px
+console.log(convert(1,inch,pixel) + " px"); // 96 px
+
+//todo:
+/*
+    - add commas to convert output
+    - finish adding units
+*/
