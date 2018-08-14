@@ -133,6 +133,8 @@ function copyValue() {
 
 $(function () {
     
+    //$("#11").css("background-color", "rgb(228, 193, 39)").css("color","rgb(236, 236, 236)");
+    //$("#12").css("background-color", "tomato").css("color", "rgb(236, 236, 236)");
 
     var clickSound = new Audio();
     clickSound.src = "./click.mp3";

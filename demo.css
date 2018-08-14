@@ -41,7 +41,6 @@ html body #valueOne {
   height: 25%;
 }
 html body #valueTwo {
-  background-color: white;
   height: 25%;
 }
 html body .numberRow {
@@ -130,7 +129,6 @@ html body #valueTwoRowTwo .keyCap {
   padding: 2% 1% 0 1%;
   margin: 0;
   margin-right: -3pt;
-  background-color: white;
 }
 html body #keypad .keyCap:focus,
 html body #valueTwoRowTwo .keyCap:focus,
