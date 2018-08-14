@@ -133,7 +133,6 @@ function convert(value,fromUnit,toUnit,commas=true) {
 console.log("1 mi to m = " + convert(1,length.mile,length.meter)); // 1,609.34154128375621
 console.log("1 mi to ft = " + convert(1,length.mile,length.foot, false)); // 5280
 
-
 //todo:
 /*
     x add commas to convert output
