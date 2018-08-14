@@ -4,7 +4,10 @@ $(function () {
     clickSound.src = "./click.mp3";
     
     $(".keyButton, .sound").mousedown(function(){
-       clickSound.play();
+       clickSound.play(); 
+       /*
+       sound function needs to stop sound when another key is clicked
+       */
     });
 
 
