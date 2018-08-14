@@ -1,6 +1,6 @@
 // unit of length
 // standard ways of measuring the magnitude of a linear dimension
-const length = {
+const unit_length = {
     point:              1, // p or pt
     pixel:              0.75, // px
     pica:               12, 
@@ -36,7 +36,7 @@ const length = {
 
 // unit of mass
 // standard ways of measuring the amount of matter an object contains
-const mass = {
+const unit_mass = {
     decigram:           0,
     centigram:          0,
     milligram:          0,
@@ -51,33 +51,33 @@ const mass = {
 
 // unit of weight
 // standard ways of measuring the pull of gravity on an object
-const weight = {
+const unit_weight = {
 
 };
 
 // unit of time
 // standard ways of measuring or expressing duration
-const time = {
+const unit_time = {
 
 };
 
 // unit of electric current
-const electric = {
+const unit_electric = {
 
 };
 
 // unit of thermodynamic temperature
-const temperature = {
+const unit_temperature = {
 
 };
 
 // unit of amount of substance
-const substance = {
+const unit_substance = {
 
 };
 
 // unit of luminous intensity
-const luminous = {
+const unit_luminous = {
 
 };
 
@@ -130,8 +130,8 @@ function convert(value,fromUnit,toUnit,commas=true) {
 
 }
 
-console.log("1 mi to m = "  + convert(1,length.mile,length.meter)); // 1,609.34154128375621
-console.log("1 mi to ft = " + convert(1,length.mile,length.foot, false)); // 5280
+//console.log("1 mi to m = "  + convert(1,unit_length.mile,unit_length.meter)); // 1,609.34154128375621
+//console.log("1 mi to ft = " + convert(1,unit_length.mile,unit_length.foot, false)); // 5280
 
 //todo:
 /*
