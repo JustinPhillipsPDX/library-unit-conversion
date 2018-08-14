@@ -6,28 +6,97 @@
     <meta name = "viewport" content = "initial-scale = 2.3, user-scalable = no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <title>Unit Conversion Demo</title>
     
     <!--<script src="./unitDefinitions.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
 
     <link rel="stylesheet" href="./demo.css">
 
-    <script scr="./demo.js"></script>
+    <script src="./demo.js"></script>
     
 </head>
 
-<body>
-    <div id="top" name="" class="">
-        <div class="">
-            
-        </div>
+<body scrolling="no">
+    <div id="valueOne" name="" class="sound">
+        &nbsp;
     </div>
-    <div id="bottom" name="" class="">
-        <div class="">
-            
+    <div id="valueTwo" name="" class="sound">
+        &nbsp;
+    </div>
+    <div id="keyboard" name="" class="">
+        <div id="rowOne" class="">
+            <div class="keyCap">
+                <button class="keyButton">
+                    7
+                </button>
+            </div>
+            <div class="keyCap">
+                <button class="keyButton">
+                    8
+                </button>
+            </div>
+            <div class="keyCap">
+                <button class="keyButton">
+                    9
+                </button>
+            </div>
+        </div>
+        <div id="rowTwo" class="">
+            <div class="keyCap">
+                <button class="keyButton">
+                    4
+                </button>
+            </div>
+            <div class="keyCap">
+                <button class="keyButton">
+                    5
+                </button>
+            </div>
+            <div class="keyCap">
+                <button class="keyButton">
+                    6
+                </button>
+            </div>
+        </div>
+        <div id="rowThree" class="">
+            <div class="keyCap">
+                <button class="keyButton">
+                    1
+                </button>
+            </div>
+            <div class="keyCap">
+                <button class="keyButton">
+                    2
+                </button>
+            </div>
+            <div class="keyCap">
+                <button class="keyButton">
+                    3
+                </button>
+            </div>
+        </div>
+        <div id="rowFour" class="">
+            <div class="keyCap">
+                <button class="keyButton">
+                    0
+                </button>
+            </div>
+            <div class="keyCap">
+                <button class="keyButton">
+                    .
+                </button>
+            </div>
+            <div class="keyCap">
+                <button class="keyButton">
+                    DEL
+                </button>
+            </div>
         </div>
     </div>
 </body>

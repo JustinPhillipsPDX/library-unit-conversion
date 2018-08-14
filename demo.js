@@ -1,15 +1,11 @@
 
-console.log("test!");
-
-import "./unitDefinitions.js";
-
-var unitList = [];
-
-var conversion = convert(1,unit_length.foot,unit_length.inch);
-
-
 $(function () {
+    var clickSound = new Audio();
+    clickSound.src = "./click.mp3";
+    
+    $(".keyButton, .sound").mousedown(function(){
+       clickSound.play();
+    });
 
-    console.log("conversion: " + convert(1, unit_length.foot, unit_length.inch));
 
 });
