@@ -10,46 +10,70 @@ html body {
   font-family: 'Ubuntu', sans-serif;
   font-size: 100%;
   font-weight: 400;
-  background-color: white;
+  background-color: tomato;
+  position: fixed;
 }
 html body #top,
 html body #bottom {
   height: 50%;
+  width: 100%;
+  padding: 5%;
   box-sizing: border-box;
 }
-html body #top button,
-html body #bottom button {
+html body #top .button,
+html body #bottom .button {
   position: relative;
   box-sizing: border-box;
-  border-radius: 25px;
-  height: 90%;
-  width: 90%;
-  margin: 6% 5% 2%;
+  border-radius: 15px;
+  height: 100%;
+  width: 100%;
   border: 1px solid dimgray;
   border-bottom-width: 2px;
   background-color: darkgray;
 }
-html body #top button:focus,
-html body #bottom button:focus {
+html body #top .button:focus,
+html body #bottom .button:focus {
   outline: none;
   border-bottom-width: 1px;
   border-top-width: 2px;
 }
-html body #top button {
-  margin: 6% 5% 2%;
+html body #top .button .number,
+html body #bottom .button .number {
+  font-size: 800%;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  border: 0 none;
+  background-color: transparent;
+  color: white;
+  position: relative;
+  top: 20px;
+}
+html body #top .button .number:focus,
+html body #bottom .button .number:focus {
+  outline: none;
+}
+html body #top {
+  background-color: tomato;
+}
+html body #top .button {
   background-color: tomato;
   border-color: #a8412f;
 }
-html body #top button:focus {
+html body #top .button:focus,
+html body #top .button:active {
   border-color: #2e120d;
   background-color: #8d3728;
 }
-html body #bottom button {
-  margin: 2% 5% 6%;
+html body #bottom {
+  background-color: mediumaquamarine;
+}
+html body #bottom .button {
   background-color: mediumaquamarine;
   border-color: #40806a;
 }
-html body #bottom button:focus {
+html body #bottom .button:focus,
+html body #bottom .button:active {
   border-color: #162c25;
   background-color: #2e5c4d;
 }

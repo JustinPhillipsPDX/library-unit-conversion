@@ -15,19 +15,23 @@ html {
         font-family: 'Ubuntu', sans-serif;
         font-size: 100%;
         font-weight: 400;
-        background-color: white;
+        background-color: tomato;
+        position: fixed;
 
         #top, #bottom {
             height: 50%;
+            width: 100%;
+            padding: 5%;
             box-sizing: border-box;
             //background-color: gray;
-            button {
+            .button {
                 position: relative;
                 box-sizing: border-box;
-                border-radius: 25px;
-                height: 90%;
-                width: 90%;
-                margin: 6% 5% 2%;
+                border-radius: 15px;
+                height: 100%;
+                width: 100%;
+                //margin: 8% 5% 2%;
+                //padding: 0;
                 border: 1px solid dimgray;
                 border-bottom-width: 2px;
                 background-color: darkgray;
@@ -37,16 +41,34 @@ html {
                     border-bottom-width: 1px;
                     border-top-width: 2px;
                 }
+
+                .number {
+                    font-size: 800%;
+                    font-weight: 700;
+                    width: 100%;
+                    text-align: center;
+                    border: 0 none;
+                    background-color: transparent;
+                    color: white;
+                    position: relative;
+                    top: 20px;
+                    
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
             }
         }
         
         #top {
-            button {
-                margin: 6% 5% 2%;
+            background-color: tomato;
+            .button {
+                //margin: 4% 5%;
                 background-color: tomato;
                 border-color: rgb(168, 65, 47);
                 
-                &:focus {
+                &:focus, &:active {
                     border-color: rgb(46, 18, 13);
                     background-color: rgb(141, 55, 40);
                 }
@@ -54,12 +76,13 @@ html {
         }
 
         #bottom {
-            button {
-                margin: 2% 5% 6%;
+            background-color: mediumaquamarine;
+            .button {
+                //margin: 4% 5%;
                 background-color: mediumaquamarine;
                 border-color: rgb(64, 128, 106);
                 
-                &:focus {
+                &:focus, &:active {
                     border-color: rgb(22, 44, 37);
                     background-color: rgb(46, 92, 77);
                 }
