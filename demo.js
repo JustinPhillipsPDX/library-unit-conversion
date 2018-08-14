@@ -3,7 +3,7 @@ $(function () {
     var clickSound = new Audio();
     clickSound.src = "./click.mp3";
     
-    $(".keyButton").mousedown(function(){
+    $(".clickSound").mousedown(function(){
         clickSound.load();
         clickSound.play(); 
        /*

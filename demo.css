@@ -2,6 +2,21 @@
   margin: 0;
   padding: 0;
 }
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
 html,
 body {
   height: 100%;
@@ -9,7 +24,7 @@ body {
 }
 html body {
   font-family: 'Ubuntu', sans-serif;
-  font-size: 100%;
+  font-size: 205%;
   font-weight: 400;
   background-color: white;
   position: fixed;
@@ -17,54 +32,98 @@ html body {
 }
 html body #valueOne,
 html body #valueTwo,
-html body #keyboard {
+html body #keypad {
   display: inline-block;
   position: relative;
   width: 100%;
 }
 html body #valueOne {
-  background-color: tomato;
   height: 25%;
 }
 html body #valueTwo {
-  background-color: mediumaquamarine;
+  background-color: white;
   height: 25%;
 }
-html body #keyboard {
-  background-color: white;
-  height: calc(120pt);
-}
-html body #keyboard #rowOne,
-html body #keyboard #rowTwo,
-html body #keyboard #rowThree,
-html body #keyboard #rowFour {
-  background-color: white;
+html body .numberRow {
+  text-align: right;
   box-sizing: border-box;
-  padding: 0 1% 0 1%;
-}
-html body #keyboard #rowOne:last-of-type,
-html body #keyboard #rowTwo:last-of-type,
-html body #keyboard #rowThree:last-of-type,
-html body #keyboard #rowFour:last-of-type {
-  padding-bottom: 1%;
+  padding: 5pt 10pt;
+  background-color: #ececec;
+  color: #5e5e5e;
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
-  html body #keyboard #rowOne,
-  html body #keyboard #rowTwo,
-  html body #keyboard #rowThree,
-  html body #keyboard #rowFour {
-    height: 22pt;
+  html body .numberRow {
+    font-size: 125%;
+    line-height: 52pt;
+    height: 62.5pt;
   }
 }
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: portrait) {
-  html body #keyboard #rowOne,
-  html body #keyboard #rowTwo,
-  html body #keyboard #rowThree,
-  html body #keyboard #rowFour {
-    height: 28pt;
+  html body .numberRow {
+    font-size: 215%;
+    line-height: 80pt;
+    height: 89pt;
   }
 }
-html body #keyboard .keyCap {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
+  html body #keypad,
+  html body #valueTwoRowTwo {
+    height: calc(200pt);
+  }
+}
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: portrait) {
+  html body #keypad,
+  html body #valueTwoRowTwo {
+    height: calc(112pt);
+  }
+}
+html body #keypad #rowOne,
+html body #valueTwoRowTwo #rowOne,
+html body #keypad #rowTwo,
+html body #valueTwoRowTwo #rowTwo,
+html body #keypad #rowThree,
+html body #valueTwoRowTwo #rowThree,
+html body #keypad #rowFour,
+html body #valueTwoRowTwo #rowFour {
+  box-sizing: border-box;
+  padding: 0 1% 0 1%;
+}
+html body #keypad #rowOne:last-of-type,
+html body #valueTwoRowTwo #rowOne:last-of-type,
+html body #keypad #rowTwo:last-of-type,
+html body #valueTwoRowTwo #rowTwo:last-of-type,
+html body #keypad #rowThree:last-of-type,
+html body #valueTwoRowTwo #rowThree:last-of-type,
+html body #keypad #rowFour:last-of-type,
+html body #valueTwoRowTwo #rowFour:last-of-type {
+  padding-bottom: 1%;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
+  html body #keypad #rowOne,
+  html body #valueTwoRowTwo #rowOne,
+  html body #keypad #rowTwo,
+  html body #valueTwoRowTwo #rowTwo,
+  html body #keypad #rowThree,
+  html body #valueTwoRowTwo #rowThree,
+  html body #keypad #rowFour,
+  html body #valueTwoRowTwo #rowFour {
+    height: 50pt;
+  }
+}
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: portrait) {
+  html body #keypad #rowOne,
+  html body #valueTwoRowTwo #rowOne,
+  html body #keypad #rowTwo,
+  html body #valueTwoRowTwo #rowTwo,
+  html body #keypad #rowThree,
+  html body #valueTwoRowTwo #rowThree,
+  html body #keypad #rowFour,
+  html body #valueTwoRowTwo #rowFour {
+    height: 65pt;
+  }
+}
+html body #keypad .keyCap,
+html body #valueTwoRowTwo .keyCap {
   display: inline-block;
   box-sizing: border-box;
   border: 0 none;
@@ -73,44 +132,77 @@ html body #keyboard .keyCap {
   margin-right: -3pt;
   background-color: white;
 }
-html body #keyboard .keyCap:focus,
-html body #keyboard .keyCap:active {
+html body #keypad .keyCap:focus,
+html body #valueTwoRowTwo .keyCap:focus,
+html body #keypad .keyCap:active,
+html body #valueTwoRowTwo .keyCap:active {
   outline: none;
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
-  html body #keyboard .keyCap {
-    width: 34pt;
-    height: 22pt;
+  html body #keypad .keyCap,
+  html body #valueTwoRowTwo .keyCap {
+    width: 76.5pt;
+    height: 50pt;
   }
 }
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: portrait) {
-  html body #keyboard .keyCap {
-    width: 44pt;
-    height: 28pt;
+  html body #keypad .keyCap,
+  html body #valueTwoRowTwo .keyCap {
+    width: 99.5pt;
+    height: 65pt;
   }
 }
-html body #keyboard .keyCap .keyButton {
+html body #keypad .keyCap .keyButton,
+html body #valueTwoRowTwo .keyCap .keyButton {
   background-color: #ececec;
   border: 0 none;
   width: 100%;
   height: 100%;
-  border-radius: 2px;
+  border-radius: 4px;
   font-weight: 700;
   color: #5e5e5e;
 }
-html body #keyboard .keyCap .keyButton:focus {
+html body #keypad .keyCap .keyButton:focus,
+html body #valueTwoRowTwo .keyCap .keyButton:focus {
   outline: none;
 }
-html body #keyboard .keyCap .keyButton:active {
+html body #keypad .keyCap .keyButton:active,
+html body #valueTwoRowTwo .keyCap .keyButton:active {
   background-color: #cfcfcf;
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
-  html body #keyboard .keyCap .keyButton {
+  html body #keypad .keyCap .keyButton,
+  html body #valueTwoRowTwo .keyCap .keyButton {
     font-size: 65%;
   }
 }
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: portrait) {
-  html body #keyboard .keyCap .keyButton {
+  html body #keypad .keyCap .keyButton,
+  html body #valueTwoRowTwo .keyCap .keyButton {
     font-size: 75%;
+  }
+}
+html body #valueTwoRowTwo {
+  position: relative;
+  padding: 0 1% 0 1%;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
+  html body #valueTwoRowTwo {
+    height: 40pt;
+  }
+}
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: portrait) {
+  html body #valueTwoRowTwo {
+    height: 46pt;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
+  html body #valueTwoRowTwo .keyCap {
+    height: 39pt;
+  }
+}
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: portrait) {
+  html body #valueTwoRowTwo .keyCap {
+    height: 45pt;
   }
 }

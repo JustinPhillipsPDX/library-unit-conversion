@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name = "viewport" content = "initial-scale = 2.3, user-scalable = no">
+    <meta name = "viewport" content = "initial-scale = 1.0, maximum-scale= 1.0, user-scalable = 0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -13,6 +13,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
 
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
 
@@ -22,79 +24,100 @@
     
 </head>
 
-<body scrolling="no">
-    <div id="valueOne" name="" class="sound">
+<body scrolling="no" class="noselect">
+    <div id="valueOne" name="" class="">
         &nbsp;
     </div>
-    <div id="valueTwo" name="" class="sound">
-        &nbsp;
+    <div id="valueTwo" name="" class="">
+        <div id="valueTwoRowOne" class="">
+            <div id="valueTwoNumber" class="numberRow">
+                0
+            </div>
+        </div>
+        <div id="valueTwoRowTwo" class="">
+            <div class="keyCap">
+                <button class="keyButton clickSound">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </div>
+            <div class="keyCap">
+                <button class="keyButton clickSound">
+                    <i class="fas fa-ruler-horizontal"></i>
+                </button>
+            </div>
+            <div class="keyCap">
+                <button class="keyButton clickSound">
+                    <i class="fas fa-clipboard"></i>
+                </button>
+            </div>
+        </div>
     </div>
-    <div id="keyboard" name="" class="">
+    <div id="keypad" name="" class="">
         <div id="rowOne" class="">
             <div class="keyCap">
-                <button class="keyButton">
+                <button class="keyButton clickSound">
                     7
                 </button>
             </div>
             <div class="keyCap">
-                <button class="keyButton">
+                <button class="keyButton clickSound">
                     8
                 </button>
             </div>
             <div class="keyCap">
-                <button class="keyButton">
+                <button class="keyButton clickSound">
                     9
                 </button>
             </div>
         </div>
         <div id="rowTwo" class="">
             <div class="keyCap">
-                <button class="keyButton">
+                <button class="keyButton clickSound">
                     4
                 </button>
             </div>
             <div class="keyCap">
-                <button class="keyButton">
+                <button class="keyButton clickSound">
                     5
                 </button>
             </div>
             <div class="keyCap">
-                <button class="keyButton">
+                <button class="keyButton clickSound">
                     6
                 </button>
             </div>
         </div>
         <div id="rowThree" class="">
             <div class="keyCap">
-                <button class="keyButton">
+                <button class="keyButton clickSound">
                     1
                 </button>
             </div>
             <div class="keyCap">
-                <button class="keyButton">
+                <button class="keyButton clickSound">
                     2
                 </button>
             </div>
             <div class="keyCap">
-                <button class="keyButton">
+                <button class="keyButton clickSound">
                     3
                 </button>
             </div>
         </div>
         <div id="rowFour" class="">
             <div class="keyCap">
-                <button class="keyButton">
+                <button class="keyButton clickSound">
                     0
                 </button>
             </div>
             <div class="keyCap">
-                <button class="keyButton">
+                <button class="keyButton clickSound">
                     .
                 </button>
             </div>
             <div class="keyCap">
-                <button class="keyButton">
-                    DEL
+                <button class="keyButton clickSound">
+                    <i class="fas fa-backspace"></i>
                 </button>
             </div>
         </div>
