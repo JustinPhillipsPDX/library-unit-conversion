@@ -118,14 +118,6 @@ function addValue(number) {
     $("#valueTwoNumber").html(valueTwo);
 }
 
-function removeValue() {
-
-}
-
-function deleteValue() {
-
-}
-
 function copyValue() {
 
 }
