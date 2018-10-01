@@ -65,11 +65,18 @@ function addValue(number) {
 
             break;
         case "10":
-
-            if ($("#valueTwoNumber").html() == "0") {
-                valueTwo += "0.";
+            
+            //stops multiple decimal points from being added to string
+            if (valueTwo.indexOf('.') <= -1) {
+                
+                //adds zero before decimal if the starting value is 0
+                if ($("#valueTwoNumber").html() == "0") {
+                    valueTwo += "0.";
+                } else {
+                    valueTwo += ".";
+                }
             } else {
-                valueTwo += ".";
+                valueTwo += "0";
             }
             
             runningTotal = valueTwo;
@@ -139,7 +146,7 @@ $(function () {
        */
     });
 
-    $(".keyButton").on("click", function(){
+    $(".keyCap").on("click", function(){
 
         addValue(this.id);
         

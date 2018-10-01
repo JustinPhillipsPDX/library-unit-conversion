@@ -11,10 +11,9 @@
      -khtml-user-select: none; /* Konqueror HTML */
        -moz-user-select: none; /* Firefox */
         -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 }
-//https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting
+/*https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting*/
 
 html, body {
     height: 100%;
@@ -31,150 +30,67 @@ html {
         position: fixed;
         overflow: hidden;
 
-        #valueOne, #valueTwo, #keypad {
-            display: inline-block;
-            position: relative;
-            width: 100%;
-            
-        }
+       
+        #appWrapper {
+            //background-color: coral;
+            position: absolute;
+            //top: 20pt;
+            top: 8pt;
+            //bottom: 34pt;
+            bottom: 8pt;
+            left: 8pt;
+            right: 8pt;
         
-        #valueOne {
-            //background-color: tomato;
-            //background-color: white;
-            height: 25%;
-        }
 
-        #valueTwo {
-            //background-color: mediumaquamarine;
-            //background-color: white;
-            height: 25%;
-        }
-
-        .numberRow {
-            text-align: right;
-            box-sizing: border-box;
-            padding: 5pt 10pt;
-            background-color: rgb(236, 236, 236);
-            color: rgb(94, 94, 94);
-            @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation:portrait) {
-                font-size: 125%;
-                line-height: 52pt;
-                height: 62.5pt;
+            #valueTwoNumber {
+                font-size: 58px;
+                text-align: right;
+                padding-right: 11px;
+                color: #5E5E5E;
             }
 
-            @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation:portrait) {
-                font-size: 215%;
-                line-height: 80pt;
-                height: 89pt;
-            }
-        }
-
-        #keypad, #valueTwoRowTwo {
-            //background-color: rgb(143, 90, 90);
-            @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation:portrait) {
-                    height: calc(50pt * 4);
-                }
-
-                @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation:portrait) {
-                    height: calc(28pt * 4);
-                }
-            
-            #rowOne, #rowTwo, #rowThree, #rowFour {
-                //background-color: white;
-                box-sizing: border-box;
-                padding: 0 1% 0 1%;
-                
-                &:last-of-type {
-                    padding-bottom: 1%;
-                }
-
-                @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation:portrait) {
-                    height: 50pt;
-                }
-
-                @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation:portrait) {
-                    height: 65pt;
-                }
-
-            }
-            .keyCap {
-                display: inline-block;
-                box-sizing: border-box;
-                border: 0 none;
-                padding: 2% 1% 0 1%;
+            #keypad {
+                //background-color: paleturquoise;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                padding: 0;
                 margin: 0;
-                margin-right: -3pt;
-                //background-color: white;
+                text-align: center;
 
-                &:focus, &:active {
-                    outline: none;
-                }
-
-                @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation:portrait) {
-                    width: 76.5pt;
-                    height: 50pt;
-                }
-
-                @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation:portrait) {
-                    width: 99.5pt;
-                    height: 65pt;
-                }
-
-                .keyButton {
-                    background-color: rgb(236, 236, 236);
-                    border: 0 none;
-                    width: 100%;
+                .keyCap {
+                    background-color: white;
+                    box-sizing: border-box;
+                    width: 33.3%;
                     height: 100%;
-                    border-radius: 4px;
+                    margin: 0;
+                    border: 1px solid #C4C4C4;
+                    font-family: 'Ubuntu', sans-serif;
                     font-weight: 700;
-                    color: rgb(94, 94, 94);
+                    font-size: 30px;
+                    line-height: normal;
+                    color: #959595;
 
                     &:focus {
-                        outline: none;
-                        
+                        outline: 0;
                     }
-                    
+
                     &:active {
-                        background-color: rgb(207, 207, 207);
-                    }
-                    
-
-                    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation:portrait) {
-                        font-size: 65%;
-                    }
-
-                    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation:portrait) {
-                        font-size: 75%;
+                        border-width: 2px;
+                        border-color: #C0C0C0;
+                        background-color: #FAFAFA;
                     }
                 }
-            }
-        }
-        #valueTwoRowTwo {
-            position: relative;
-            padding: 0 1% 0 1%;
-            //background-color: pink;
-            @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation:portrait) {
-                height: 40pt;
-                //bottom: -38pt;
-            }
 
-            @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation:portrait) {
-                height: 46pt;
-                //bottom: -52pt;
-            }
-
-            .keyCap {
-
-                @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation:portrait) {
-                    height: 39pt;
+                .key0, .key1,.key2,.key3,.key4,.key5,.key6,.key7,.key8,.key9,.key10,.key11 {
+                    height: 60pt;
                 }
 
-                @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation:portrait) {
-                    height: 45pt;
+                .key12, .key13, .key14 {
+                    height: 44pt;
                 }
             }
-
-            
         }
     }
 }
