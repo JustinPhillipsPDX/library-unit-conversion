@@ -75,7 +75,9 @@ function addValue(number) {
                 } else {
                     valueTwo += ".";
                 }
+
             } else {
+
                 valueTwo += "0";
             }
             
